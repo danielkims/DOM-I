@@ -41,19 +41,28 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navTags= document.querySelectorALL('a')
+// Nav Text
+const displayTags= document.querySelectorAll('a')
 
-navTags[0].setAttribute('class', '.nav-item-1')
-navTags[0].innerText = "Services"
-navTags[1].setAttribute('class', '.nav-item-2')
-navTags[1].innerText = "Product"
-navTags[2].setAttribute('class', '.nav-item-3')
-navTags[2].innerText = "Vision"
-navTags[3].setAttribute('class', '.nav-item-4')
-navTags[3].innerText = "Features"
-navTags[4].setAttribute('class', '.nav-item-5')
-navTags[4].innerText = "About"
-navTags[5].setAttribute('class', '.nav-item-6')
-navTags[5].innerText = "Contact"
+displayTags[0].setAttribute('class', '.nav-item-1')
+displayTags[0].innerText = "Services"
+displayTags[1].setAttribute('class', '.nav-item-2')
+displayTags[1].innerText = "Product"
+displayTags[2].setAttribute('class', '.nav-item-3')
+displayTags[2].innerText = "Vision"
+displayTags[3].setAttribute('class', '.nav-item-4')
+displayTags[3].innerText = "Features"
+displayTags[4].setAttribute('class', '.nav-item-5')
+displayTags[4].innerText = "About"
+displayTags[5].setAttribute('class', '.nav-item-6')
+displayTags[5].innerText = "Contact"
 
-navTags.forEach(link => link.style.color = 'green')
+displayTags.forEach(link => link.style.color = 'green')
+
+// Nav Items
+const newDTags = document.createElement('a');
+const mainNav = document.querySelector('nav');
+newDTags.innerText = 'Reviews'
+newDTags.href = '#'
+mainNav.prepend(newDTags)
+newDTags.style.color = 'green'
